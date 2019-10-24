@@ -12,7 +12,7 @@ const getObjectId = function (object, callback) {
 			const data = response.body
 
 			if(data.total === 0){
-				callback("ERROR: No se oencontró objeto", null)
+				callback("ERROR: No se encontró objeto", null)
 			} else {
 				const info = {
 					objectId : data.objectIDs[0],
