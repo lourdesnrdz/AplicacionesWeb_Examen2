@@ -6,12 +6,13 @@ const getObjectId = function (object, callback) {
 
 	request({url, json:true}, function(error, response) {
 		if(error) {
+			console.log(error)
 			callback("ERROR conexión fallida", null)
 		} else {
 			const data = response.body
 
 			if(data.total === 0){
-				callback("ERROR: No se oncontró objeto", null)
+				callback("ERROR: No se oencontró objeto", null)
 			} else {
 				const info = {
 					objectId : data.objectIDs[0],
@@ -29,6 +30,7 @@ const getObjectInfo = function(objectId, search, callback) {
 
 	request({url, json:true}, function(error, response) {
 		if(error) {
+			console.log(error)
 			callback("ERROR conexión fallida", null)
 		} else {
 			const data = response.body
