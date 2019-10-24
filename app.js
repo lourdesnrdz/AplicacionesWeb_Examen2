@@ -12,8 +12,7 @@ const matricula = 'A01039707'
 const nombre = 'Lourdes Navarrete Rodríguez'
 
 app.get('', function(req, res) {
-	res.send("<h1>Hola!</h1>")
-	res.send("<h2> Ingresa la ruta /students/ con tu id o /met?search= para buscar un objeto</h2>")
+	res.send("<h2>Hola!</h2> <h3>Ingresa la ruta /students/ con tu id o /met?search= para buscar un objeto</h3>")
 })
 
 app.get('/students/:id', function(req, res) {
